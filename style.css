@@ -1,0 +1,799 @@
+* {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        scroll-behavior: smooth;
+    }
+
+    :root {
+        --bg-color: #1a1a2e;
+        --text-color: #e0ffff;
+        --navbar-bg: #12121f;
+        --navbar-link: #f0f0f0;
+        --navbar-link-hover: #6dd5ed;
+        --sawit-bg: linear-gradient(135deg, #271a2e 0%, #12262c 100%);
+        --container2-bg: #12121f;
+        --container3-bg: linear-gradient(135deg, #1c3b57 0%, #00a9dd 100%);
+        --footer-bg: conic-gradient(135deg, #271a2e 0%, #12262c 100%);
+        --border-color: rgba(109, 213, 237, 0.3);
+        --shadow-color: rgba(109, 213, 237, 0.2);
+        --link-color: #87cefa;
+        --link-hover-color: #00ffff;
+        --active-lang-bg: #87cefa;
+        --active-lang-border: #87cefa;
+        --scrollbar-thumb-color: #1c3b57;
+        --goto-icon-color: #87cefa;
+        --contact-btn-bg: #87cefa;
+        --contact-btn-text: #12121f;
+    }
+
+    body[data-theme="rose-noir"] {
+        --bg-color: #1a111a;
+        --text-color: #f0e6f0;
+        --navbar-bg: #100a10;
+        --navbar-link: #e6e6fa;
+        --navbar-link-hover: #ff69b4;
+        --sawit-bg: linear-gradient(135deg, #2e1a27 0%, #1f122c 100%);
+        --container2-bg: #100a10;
+        --container3-bg: linear-gradient(135deg, #4c2a4c 0%, #7f497f 100%);
+        --footer-bg: conic-gradient(135deg, #2e1a27 0%, #1f122c 100%);
+        --border-color: rgba(255, 105, 180, 0.4);
+        --shadow-color: rgba(255, 105, 180, 0.25);
+        --link-color: #ff85c1;
+        --link-hover-color: #ffffff;
+        --active-lang-bg: #ff85c1;
+        --active-lang-border: #ff85c1;
+        --scrollbar-thumb-color: #4c2a4c;
+        --goto-icon-color: #ff85c1;
+        --contact-btn-bg: #ff85c1;
+        --contact-btn-text: #100a10;
+    }
+
+    body[data-theme="bleu-noir"] {
+        --bg-color: #1a1a2e;
+        --text-color: #e0ffff;
+        --navbar-bg: #12121f;
+        --navbar-link: #f0f0f0;
+        --navbar-link-hover: #6dd5ed;
+        --sawit-bg: linear-gradient(135deg, #271a2e 0%, #12262c 100%);
+        --container2-bg: #12121f;
+        --container3-bg: linear-gradient(135deg, #1c3b57 0%, #00a9dd 100%);
+        --footer-bg: conic-gradient(135deg, #271a2e 0%, #12262c 100%);
+        --border-color: rgba(109, 213, 237, 0.3);
+        --shadow-color: rgba(109, 213, 237, 0.2);
+        --link-color: #87cefa;
+        --link-hover-color: #00ffff;
+        --active-lang-bg: #87cefa;
+        --active-lang-border: #87cefa;
+        --scrollbar-thumb-color: #1c3b57;
+        --goto-icon-color: #87cefa;
+        --contact-btn-bg: #87cefa;
+        --contact-btn-text: #12121f;
+    }
+
+    body[data-theme="rouge-blanc"] {
+        --bg-color: #fff5f5;
+        --text-color: #5d0000;
+        --navbar-bg: #ffffff;
+        --navbar-link: #a52a2a;
+        --navbar-link-hover: #ff4500;
+        --sawit-bg: #ffffff;
+        --container2-bg: #ffffff;
+        --container3-bg: #fffafa;
+        --footer-bg: #ffffff;
+        --border-color: #ffb6c1;
+        --shadow-color: rgba(255, 69, 0, 0.15);
+        --link-color: #cd5c5c;
+        --link-hover-color: #ff0000;
+        --active-lang-bg: #cd5c5c;
+        --active-lang-border: #cd5c5c;
+        --scrollbar-thumb-color: #f7baba;
+        --goto-icon-color: #cd5c5c;
+        --contact-btn-bg: #cd5c5c;
+        --contact-btn-text: #ffffff;
+    }
+
+    body[data-theme="rouge-noir"] {
+        --bg-color: #1c0000;
+        --text-color: #ffdddd;
+        --navbar-bg: #120000;
+        --navbar-link: #f5c5c5;
+        --navbar-link-hover: #ff4500;
+        --sawit-bg: linear-gradient(135deg, #2e1a1a 0%, #2c1212 100%);
+        --container2-bg: #120000;
+        --container3-bg: linear-gradient(135deg, #571c1c 0%, #dd0000 100%);
+        --footer-bg: conic-gradient(135deg, #2e1a1a 0%, #2c1212 100%);
+        --border-color: rgba(255, 69, 0, 0.4);
+        --shadow-color: rgba(255, 69, 0, 0.25);
+        --link-color: #ff6347;
+        --link-hover-color: #ffffff;
+        --active-lang-bg: #ff6347;
+        --active-lang-border: #ff6347;
+        --scrollbar-thumb-color: #571c1c;
+        --goto-icon-color: #ff6347;
+        --contact-btn-bg: #ff6347;
+        --contact-btn-text: #120000;
+    }
+
+    body[data-theme="vert-blanc"] {
+        --bg-color: #f0fff0;
+        --text-color: #003300;
+        --navbar-bg: #ffffff;
+        --navbar-link: #2e8b57;
+        --navbar-link-hover: #3cb371;
+        --sawit-bg: #ffffff;
+        --container2-bg: #ffffff;
+        --container3-bg: #f5fff5;
+        --footer-bg: #ffffff;
+        --border-color: #98fb98;
+        --shadow-color: rgba(60, 179, 113, 0.15);
+        --link-color: #006400;
+        --link-hover-color: #228b22;
+        --active-lang-bg: #2e8b57;
+        --active-lang-border: #2e8b57;
+        --scrollbar-thumb-color: #b4eeb4;
+        --goto-icon-color: #2e8b57;
+        --contact-btn-bg: #2e8b57;
+        --contact-btn-text: #ffffff;
+    }
+
+    body[data-theme="vert-noir"] {
+        --bg-color: #011c01;
+        --text-color: #e0ffe0;
+        --navbar-bg: #001000;
+        --navbar-link: #b2f0b2;
+        --navbar-link-hover: #90ee90;
+        --sawit-bg: linear-gradient(135deg, #0a2e1a 0%, #122c12 100%);
+        --container2-bg: #001000;
+        --container3-bg: linear-gradient(135deg, #1c571c 0%, #00dd00 100%);
+        --footer-bg: conic-gradient(135deg, #0a2e1a 0%, #122c12 100%);
+        --border-color: rgba(60, 179, 113, 0.4);
+        --shadow-color: rgba(60, 179, 113, 0.25);
+        --link-color: #32cd32;
+        --link-hover-color: #ffffff;
+        --active-lang-bg: #32cd32;
+        --active-lang-border: #32cd32;
+        --scrollbar-thumb-color: #1c571c;
+        --goto-icon-color: #32cd32;
+        --contact-btn-bg: #32cd32;
+        --contact-btn-text: #001000;
+    }
+
+    body[data-theme="violet-blanc"] {
+        --bg-color: #f3e5f5;
+        --text-color: #4a148c;
+        --navbar-bg: #ffffff;
+        --navbar-link: #8e24aa;
+        --navbar-link-hover: #d81b60;
+        --sawit-bg: #ffffff;
+        --container2-bg: #ffffff;
+        --container3-bg: #ede7f6;
+        --footer-bg: #ffffff;
+        --border-color: #ce93d8;
+        --shadow-color: rgba(171, 71, 188, 0.15);
+        --link-color: #ab47bc;
+        --link-hover-color: #7b1fa2;
+        --active-lang-bg: #ab47bc;
+        --active-lang-border: #ab47bc;
+        --scrollbar-thumb-color: #d1b3d8;
+        --goto-icon-color: #ab47bc;
+        --contact-btn-bg: #ab47bc;
+        --contact-btn-text: #ffffff;
+    }
+
+    body[data-theme="violet-noir"] {
+        --bg-color: #1a001a;
+        --text-color: #f3e5f5;
+        --navbar-bg: #120012;
+        --navbar-link: #e1bee7;
+        --navbar-link-hover: #ce93d8;
+        --sawit-bg: linear-gradient(135deg, #2e1a2e 0%, #2c122c 100%);
+        --container2-bg: #120012;
+        --container3-bg: linear-gradient(135deg, #571c57 0%, #8e24aa 100%);
+        --footer-bg: conic-gradient(135deg, #2e1a2e 0%, #2c122c 100%);
+        --border-color: rgba(171, 71, 188, 0.4);
+        --shadow-color: rgba(171, 71, 188, 0.25);
+        --link-color: #ba68c8;
+        --link-hover-color: #ffffff;
+        --active-lang-bg: #ba68c8;
+        --active-lang-border: #ba68c8;
+        --scrollbar-thumb-color: #571c57;
+        --goto-icon-color: #ba68c8;
+        --contact-btn-bg: #ba68c8;
+        --contact-btn-text: #120012;
+    }
+
+    body[data-theme="orange-blanc"] {
+        --bg-color: #fff3e0;
+        --text-color: #e65100;
+        --navbar-bg: #ffffff;
+        --navbar-link: #fb8c00;
+        --navbar-link-hover: #ff5722;
+        --sawit-bg: #ffffff;
+        --container2-bg: #ffffff;
+        --container3-bg: #fffaf0;
+        --footer-bg: #ffffff;
+        --border-color: #ffcc80;
+        --shadow-color: rgba(255, 152, 0, 0.15);
+        --link-color: #ffa726;
+        --link-hover-color: #f57c00;
+        --active-lang-bg: #ffa726;
+        --active-lang-border: #ffa726;
+        --scrollbar-thumb-color: #ffd1a3;
+        --goto-icon-color: #ffa726;
+        --contact-btn-bg: #ffa726;
+        --contact-btn-text: #ffffff;
+    }
+
+    body[data-theme="orange-noir"] {
+        --bg-color: #1c0e00;
+        --text-color: #fff3e0;
+        --navbar-bg: #120800;
+        --navbar-link: #ffcc80;
+        --navbar-link-hover: #ffb74d;
+        --sawit-bg: linear-gradient(135deg, #2e1a00 0%, #2c1200 100%);
+        --container2-bg: #120800;
+        --container3-bg: linear-gradient(135deg, #573a1c 0%, #ff9800 100%);
+        --footer-bg: conic-gradient(135deg, #2e1a00 0%, #2c1200 100%);
+        --border-color: rgba(255, 152, 0, 0.4);
+        --shadow-color: rgba(255, 152, 0, 0.25);
+        --link-color: #ffb74d;
+        --link-hover-color: #ffffff;
+        --active-lang-bg: #ffb74d;
+        --active-lang-border: #ffb74d;
+        --scrollbar-thumb-color: #573a1c;
+        --goto-icon-color: #ffb74d;
+        --contact-btn-bg: #ffb74d;
+        --contact-btn-text: #120800;
+    }
+
+    body[data-theme="cyan-noir"] {
+        --bg-color: #001a1a;
+        --text-color: #e0ffff;
+        --navbar-bg: #001212;
+        --navbar-link: #ccffff;
+        --navbar-link-hover: #00ffff;
+        --sawit-bg: linear-gradient(135deg, #002e2e 0%, #002c2c 100%);
+        --container2-bg: #001212;
+        --container3-bg: linear-gradient(135deg, #005757 0%, #00aaaa 100%);
+        --footer-bg: conic-gradient(135deg, #002e2e 0%, #002c2c 100%);
+        --border-color: rgba(0, 255, 255, 0.4);
+        --shadow-color: rgba(0, 255, 255, 0.25);
+        --link-color: #40e0d0;
+        --link-hover-color: #ffffff;
+        --active-lang-bg: #40e0d0;
+        --active-lang-border: #40e0d0;
+        --scrollbar-thumb-color: #005757;
+        --goto-icon-color: #40e0d0;
+        --contact-btn-bg: #40e0d0;
+        --contact-btn-text: #001212;
+    }
+
+    body[data-theme="or-noir"] {
+        --bg-color: #1c1a00;
+        --text-color: #fffde0;
+        --navbar-bg: #121000;
+        --navbar-link: #fffacd;
+        --navbar-link-hover: #ffd700;
+        --sawit-bg: linear-gradient(135deg, #2e2a00 0%, #2c2a00 100%);
+        --container2-bg: #121000;
+        --container3-bg: linear-gradient(135deg, #575000 0%, #ffbf00 100%);
+        --footer-bg: conic-gradient(135deg, #2e2a00 0%, #2c2a00 100%);
+        --border-color: rgba(255, 215, 0, 0.4);
+        --shadow-color: rgba(255, 215, 0, 0.25);
+        --link-color: #f0e68c;
+        --link-hover-color: #ffffff;
+        --active-lang-bg: #f0e68c;
+        --active-lang-border: #f0e68c;
+        --scrollbar-thumb-color: #575000;
+        --goto-icon-color: #f0e68c;
+        --contact-btn-bg: #f0e68c;
+        --contact-btn-text: #121000;
+    }
+
+    body[data-theme="magenta-noir"] {
+        --bg-color: #1a001a;
+        --text-color: #ffe0ff;
+        --navbar-bg: #120012;
+        --navbar-link: #f5d5f5;
+        --navbar-link-hover: #ff00ff;
+        --sawit-bg: linear-gradient(135deg, #2e002e 0%, #2c002c 100%);
+        --container2-bg: #120012;
+        --container3-bg: linear-gradient(135deg, #570057 0%, #aa00aa 100%);
+        --footer-bg: conic-gradient(135deg, #2e002e 0%, #2c002c 100%);
+        --border-color: rgba(255, 0, 255, 0.4);
+        --shadow-color: rgba(255, 0, 255, 0.25);
+        --link-color: #f06ff0;
+        --link-hover-color: #ffffff;
+        --active-lang-bg: #f06ff0;
+        --active-lang-border: #f06ff0;
+        --scrollbar-thumb-color: #570057;
+        --goto-icon-color: #f06ff0;
+        --contact-btn-bg: #f06ff0;
+        --contact-btn-text: #120012;
+    }
+
+    body[data-theme="gris-noir"] {
+        --bg-color: #1c1c1c;
+        --text-color: #e0e0e0;
+        --navbar-bg: #121212;
+        --navbar-link: #cccccc;
+        --navbar-link-hover: #ffffff;
+        --sawit-bg: linear-gradient(135deg, #2e2e2e 0%, #2c2c2c 100%);
+        --container2-bg: #121212;
+        --container3-bg: linear-gradient(135deg, #575757 0%, #888888 100%);
+        --footer-bg: conic-gradient(135deg, #2e2e2e 0%, #2c2c2c 100%);
+        --border-color: rgba(180, 180, 180, 0.4);
+        --shadow-color: rgba(180, 180, 180, 0.25);
+        --link-color: #b0b0b0;
+        --link-hover-color: #ffffff;
+        --active-lang-bg: #b0b0b0;
+        --active-lang-border: #b0b0b0;
+        --scrollbar-thumb-color: #575757;
+        --goto-icon-color: #b0b0b0;
+        --contact-btn-bg: #b0b0b0;
+        --contact-btn-text: #121212;
+    }
+
+    body {
+        font-family: 'Kanit', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        /* Utilisation de Kanit comme police principale */
+        background-color: var(--bg-color);
+        color: var(--text-color);
+        margin: 0;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        /* Aligne le contenu en haut */
+        transition: background-color 0.3s ease, color 0.3s ease;
+        /* Ajout de ease pour la transition */
+    }
+
+    ::-webkit-scrollbar {
+        width: 10px;
+        height: 10px;
+    }
+
+    ::-webkit-scrollbar-track {
+        background: #f1f1f1;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background-color: var(--scrollbar-thumb-color);
+        border-radius: 2.9px;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    .navbar {
+        position: sticky;
+        /* Rendre la navbar collante */
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding: 1rem 5%;
+        background-color: var(--navbar-bg);
+        display: flex;
+        justify-content: space-around;
+        /* Ajustement pour mieux centrer les éléments */
+        align-items: center;
+        border-bottom: 1px solid var(--border-color);
+        box-shadow: 0 2px 4px var(--shadow-color);
+        transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+        /* Transitions complètes */
+        direction: ltr;
+        /* Force la direction de gauche à droite pour la navbar */
+        z-index: 1000;
+        /* Assure que la navbar est au-dessus des autres éléments */
+        /* Hide on scroll transition */
+        transform: translateY(0);
+        transition: transform 0.3s ease-out, background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .navbar.navbar-hidden {
+        transform: translateY(-100%);
+        /* Move navbar completely out of view */
+    }
+
+    .nav-logo {
+        font-size: 1.8rem;
+        font-weight: bold;
+        color: var(--navbar-link-hover);
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+    }
+
+    .nav-logo .logo-svg {
+        margin-right: 0.5rem;
+        /* Espace entre le SVG et le texte */
+        transition: transform 0.3s ease;
+    }
+
+
+    .nav-links {
+        display: flex;
+        gap: 2rem;
+        align-items: center;
+    }
+
+    .navbar a.nav-link {
+        color: var(--navbar-link);
+        font-size: 1.1rem;
+        transition: color 0.3s ease;
+        padding: 9px;
+        margin: 0 5px;
+        /* Add some margin for spacing */
+        border-radius: 20px;
+        border: 2px solid var(--border-color);
+    }
+
+    /* For larger screens, ensure mobile menu content is always displayed inline */
+    @media (min-width: 769px) {
+        .navbar .mobile-menu-content {
+            display: flex !important;
+            /* Override mobile display: none */
+            position: static;
+            /* Reset position */
+            flex-direction: row;
+            /* Reset flex direction */
+            gap: 2rem;
+            /* Reset gap */
+        }
+    }
+
+    .navbar a.nav-link:hover {
+        color: var(--navbar-link-hover);
+    }
+
+    .sawit {
+        width: 100%;
+        /* Prend toute la largeur */
+        background: var(--sawit-bg);
+        /* Use background for gradients */
+        border-radius: 10px;
+        box-shadow: 0 0 20px var(--shadow-color);
+        margin-top: 8em;
+        /* Ajuster la marge supérieure pour la navbar sticky */
+        border: 1px solid var(--border-color);
+        padding: 2rem;
+        transition: background 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+        /* Transitions complètes */
+        z-index: 1;
+        /* S'assurer qu'il est en dessous de la navbar */
+    }
+
+    .My {
+        margin: 1.5rem 0;
+    }
+
+    .My img {
+        max-width: 300px;
+        width: 90%;
+        height: auto;
+        border-radius: 20px;
+        box-shadow: 0 0 20px var(--shadow-color);
+    }
+
+    .banner {
+        font-size: 1.2rem;
+        line-height: 1.6;
+    }
+
+    .pub {
+        color: var(--link-color);
+        transition: all .3s ease;
+        /* Transition plus douce */
+        cursor: pointer;
+    }
+
+    .pub:hover {
+        color: var(--link-hover-color);
+    }
+
+    .yt {
+        width: 50px;
+        height: 50px;
+        fill: #ff0000;
+        /* YouTube red is constant */
+        vertical-align: middle;
+        /* Assure l'alignement vertical */
+        transition: fill 0.3s ease;
+    }
+
+    .goto {
+        width: 40px;
+        height: 40px;
+        fill: var(--goto-icon-color);
+        vertical-align: middle;
+        margin-left: 10px;
+        /* Espacement */
+        transition: fill 0.3s ease, transform 0.3s ease;
+        /* Transitions complètes */
+        transform: rotate(-50deg);
+        /* Utiliser transform pour la rotation */
+        /* This rotation seems intentional for the arrow icon */
+    }
+
+    .container2 {
+        width: 100%;
+        /* Prend toute la largeur */
+        margin-top: 2rem;
+        /* Augmenter la marge pour une meilleure séparation */
+        padding: 2rem;
+        background-color: var(--container2-bg);
+        border: 1px solid var(--border-color);
+        border-radius: 10px;
+        box-shadow: 0 0 20px var(--shadow-color);
+        transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+        /* Transitions complètes */
+        height: auto;
+        /* Permet à la hauteur de s'adapter au contenu */
+    }
+
+    iframe {
+        border-radius: 10px;
+        box-shadow: 0 0 15px var(--shadow-color);
+        width: 100%;
+        min-height: 100%;
+        aspect-ratio: 16 / 9;
+        /* Assure un format 16:9 responsive pour la vidéo */
+    }
+
+    .container3 {
+        width: 100%;
+        /* Prend toute la largeur */
+        height: auto;
+        /* Permet à la hauteur de s'adapter au contenu */
+        margin-top: 2rem;
+        /* Ajuster la marge */
+        margin-bottom: 10em;
+        padding: 2rem;
+        background: var(--container3-bg);
+        border: 1px solid var(--border-color);
+        /* Use border for consistency */
+        border-radius: 10px;
+        box-shadow: 0 0 20px var(--shadow-color);
+        transition: background 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+        /* Transitions complètes */
+    }
+
+    .container3 h2 {
+        color: inherit;
+        margin-bottom: 1rem;
+    }
+
+    .container3 p {
+        color: inherit;
+        font-size: 1.1rem;
+        line-height: 1.6;
+    }
+
+    .container3 a {
+        display: inline-block;
+        /* Permet d'appliquer padding et margin */
+        background-color: var(--contact-btn-bg);
+        color: var(--contact-btn-text);
+        font-weight: bold;
+        text-decoration: none;
+        /* On enlève le soulignement */
+        padding: 0.75rem 1.5rem;
+        border-radius: 25px;
+        /* Bords arrondis pour un look de bouton */
+        margin: 0.5rem;
+        box-shadow: 0 2px 5px var(--shadow-color);
+        transition: all 0.3s ease-in-out;
+    }
+
+    .container3 a:hover {
+        transform: translateY(-2px);
+        /* Effet de lévitation au survol */
+        box-shadow: 0 4px 10px var(--shadow-color);
+    }
+
+    footer {
+        width: 100%;
+        padding: 1rem 0;
+        background-color: var(--footer-bg);
+        /* Utiliser background-color pour la transition */
+        border-top: 1px solid var(--border-color);
+        box-shadow: 0 -2px 4px var(--shadow-color);
+        transition: background-color 0.3s ease, border-top 0.3s ease, box-shadow 0.3s ease;
+        /* Transitions complètes */
+    }
+
+    .theme-selector-wrapper select {
+        padding: 0.5rem 1rem;
+        /* Ajuster le padding pour un meilleur look */
+        border: 1px solid var(--border-color);
+        border-radius: 5px;
+        background-color: var(--navbar-bg);
+        color: var(--navbar-link);
+        cursor: pointer;
+        transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+    }
+
+    /* =================================
+   Hamburger Menu Styles
+   ================================= */
+    .hamburger {
+        display: none;
+        /* Hidden by default on desktop */
+        flex-direction: column;
+        justify-content: space-around;
+        width: 30px;
+        height: 25px;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        padding: 0;
+        z-index: 1001;
+        /* Above other navbar elements */
+    }
+
+    .hamburger .bar {
+        width: 100%;
+        height: 3px;
+        background-color: var(--text-color);
+        /* Use text color for bars */
+        border-radius: 10px;
+        transition: all 0.3s ease;
+    }
+
+    /* When menu is open, animate hamburger */
+    .navbar.menu-open .hamburger .bar:nth-child(1) {
+        transform: translateY(11px) rotate(45deg);
+    }
+
+    .navbar.menu-open .hamburger .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .navbar.menu-open .hamburger .bar:nth-child(3) {
+        transform: translateY(-11px) rotate(-45deg);
+    }
+
+    /* Mobile menu content styling */
+    .navbar .mobile-menu-content {
+        display: flex;
+        /* Default for desktop */
+        flex-direction: row;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    .navbar.menu-open .mobile-menu-content {
+        /* This will be overridden by media query for mobile */
+        display: flex;
+    }
+
+    /* =================================
+   Styles du sélecteur de langue
+   ================================= */
+
+    /* Conteneur pour les boutons de langue */
+    .lang-switcher {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        /* Espace entre les boutons */
+        margin-left: 15px;
+        /* Espace à gauche du groupe de boutons */
+    }
+
+    /* Style général pour les boutons de langue */
+    .lang-switcher button {
+        background-color: transparent;
+        border: 1px solid var(--border-color);
+        color: var(--text-color);
+        padding: 6px 12px;
+        border-radius: 20px;
+        cursor: pointer;
+        font-weight: bold;
+        font-size: 0.9em;
+        /* Taille de police */
+        transition: background-color 0.3s, color 0.3s;
+    }
+
+    /* Style pour les boutons au survol */
+    .lang-switcher button:hover {
+        background-color: var(--shadow-color);
+    }
+
+    /* Style pour le bouton de langue actuellement actif */
+    .lang-switcher button.active {
+        background-color: var(--active-lang-bg);
+        /* Une couleur primaire pour montrer qu'il est actif */
+        color: #fff;
+        border-color: var(--active-lang-border);
+        /* Couleur de bordure active */
+    }
+
+    /* =================================
+   Styles pour la responsivité
+   ================================= */
+
+    /* Mobile-first approach for smaller screens (up to 768px) */
+    @media (max-width: 768px) {
+        .navbar {
+            flex-direction: row;
+            /* Keep logo and hamburger on one line */
+            justify-content: space-between;
+            /* Space between logo and hamburger */
+            align-items: center;
+            padding: 0.8rem 1rem;
+            /* Smaller padding */
+        }
+
+        .hamburger {
+            display: flex;
+            /* Show hamburger icon on mobile */
+        }
+
+        .navbar .mobile-menu-content {
+            display: none;
+            /* Hide menu content by default on mobile */
+            position: absolute;
+            /* Position relative to navbar */
+            top: 100%;
+            /* Below the navbar */
+            left: 0;
+            width: 100%;
+            background-color: var(--navbar-bg);
+            /* Use navbar background */
+            flex-direction: column;
+            /* Stack items vertically */
+            align-items: center;
+            gap: 1rem;
+            padding: 1rem 0;
+            box-shadow: 0 4px 8px var(--shadow-color);
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+        }
+
+        .navbar.menu-open .mobile-menu-content {
+            display: flex;
+            /* Show menu content when menu-open class is active */
+        }
+
+        .navbar .nav-links,
+        .navbar .lang-switcher {
+            flex-direction: column;
+            /* Empile les liens et le sélecteur de thème */
+            gap: 0.8rem;
+            /* Réduire l'espace */
+            width: 100%;
+            align-items: center;
+        }
+
+        body {
+            padding: 0 1rem;
+            /* Ajoute un peu d'espace sur les côtés pour que le contenu ne colle pas aux bords */
+        }
+
+        .sawit {
+            margin-top: 12em;
+            /* Ajuster la marge pour les petits écrans */
+            padding: 1rem;
+        }
+
+        .banner h1 {
+            font-size: 1.5rem;
+            /* Réduit la taille du titre principal */
+        }
+
+        .navbar a.nav-link {
+            width: calc(100% - 20px);
+            /* Make links take full width of menu */
+            text-align: center;
+        }
+
+        .navbar a.nav-link {
+            padding: 6px 12px;
+            /* Réduire le padding des liens de la navbar */
+            font-size: 1em;
+        }
+    }
